@@ -1,0 +1,852 @@
+/* -----------------------------------------ajout de la police---------------------------------------------------------------------- */
+
+@font-face{ /* Ajout de la police Raleway Régular */
+    font-family: Raleway;
+    src: url("../assets/font/raleway-medium.ttf");
+}
+@font-face{ /* Ajout de la police Raleway Bold */
+    font-family: Raleway;
+    src: url("../assets/font/raleway-extrabold.ttf");
+    font-weight: bold;
+    
+}
+
+/* -----------------------------------------paramètres généraux---------------------------------------------------------------------- */
+
+body{ /* réglage margin padding et font-family de la page */
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+}
+a{ /* suppression text decoration et couleur lien de la page */
+    text-decoration: none;
+    color: #000;
+}
+li{ /* suppression des puces sur les listes de la page */
+    list-style-type: none;
+}
+
+/* -----------------------------------------paramètres communs à toutes les vues----------------------------------------------------- */
+
+/* -----------------------------------------header : logo et menu-------------------------------------------------------------------- */
+
+header.header-smartphone{ /* Masque le header smartphone */
+    display: none;
+}
+header{ /* Contener header */
+    width: 95%;
+    height: 6.25em;
+    margin: auto;
+    justify-content: space-between;
+}
+.logo{ /* Contener logo */
+    margin: auto 0;
+}
+.logo img{ /* réglage de la taille de l'image */
+    width: 10%;
+}
+nav{ /* hauteur menu */
+    width: 100%;
+    height: 6.25em;
+}
+nav ul{ /* Suppression de la marge et du padding et définition de la taille du menu */
+    margin: 0;
+    padding: 0;
+}
+nav li{ /* réglage bloc li menu */
+    width: 50%;
+    height: 6.25em;
+    text-align: center;
+    margin: auto;
+}
+nav ul li:hover{ /* ajout d'une bordure au survol de li */
+    border-top: 0.125em #0065FC solid;
+}
+nav ul li:hover a{ /* changement de couleur au survol */
+    color: #0065FC;
+}
+nav li a{  /* Centrer verticalement les liens du menu */
+    display: inline-block;
+    width: 100%;
+    height: 6.25em;
+    margin: auto;
+    line-height: 6.25em;
+}
+.register:hover{ /* suppression des bordures sur register */
+    border: 0;
+}
+a.register { /* Différentiation register */
+    display: inline-block;
+    margin: auto;
+    color: #0065FC;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* -----------------------------------------filtre + recherche---------------------------------------------------------------------- */
+
+.search-filter{ /* contener Filtre + Recherche */
+    width: 95%;
+    margin: auto;
+}
+.search-filter h1{ /* titre contener */
+    margin: 0;
+}
+.search-filter p{ /* paragraphe contener */
+    margin: 0.625em 0 1.562em 0;
+}
+
+/* -----------------------------------------barre de recherche---------------------------------------------------------------------- */
+
+.map{ /* contener icône map */
+    background-color: #F2F2F2;
+    height: 3.125em;
+    border-radius: 0.625em 0 0 0.625em;
+    text-align: center;
+}
+.map p{ /* paragraphe icône map */
+    margin: 0;
+    line-height: 3.125em;
+}
+.fas.fa-map-marker-alt{ /* icône map */
+    font-size: 1.125em; 
+}
+form{ /* définition taille formulaire */
+    margin: 0;
+    padding: 0;
+}
+.search--{ /* input recherche */
+    width: 60%;
+    height: 3.125em;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.625em;
+    border: none;  
+    font-weight: bold;
+    font-size: 1.125em;
+}
+.button-search{ /* boutton recherche */
+    background-color: #0065FC;
+    width: 35%;
+    height: 3.125em;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0.625em 0.625em 0; 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+}
+.button-search:hover{ /* paramètre survol boutton recherche */
+    cursor: pointer;
+}
+.fas.fa-search{ /* Masquer bouton recherche mobile */
+    display: none;
+}
+
+/* -----------------------------------------filtre----------------------------------------------------------------------------------- */
+
+.filter{ /* contener filtre */
+    margin: 1.875em 0 2.5em 0;
+}
+.filter-bloc{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter h2{ /* titre contener */
+    font-size: 1.25em;
+    margin : auto 1.875em auto 0;
+}
+.filter--{ /* sous contener filtre */
+    height: 3.125em;
+    border-radius: 3.125em 3.125em 3.125em 3.125em;
+    border-top: 3px #F2F2F2 solid;
+    border-right: 3px #F2F2F2 solid;
+    border-bottom: 3px #F2F2F2 solid;
+    font-weight: bold;
+    margin: 0.625em 1.5625em 0 0;
+}
+.filter--:hover{
+    background-color: #DEEBFF;
+    cursor: pointer;
+}
+.filter-img{ /* contener rond contenant icône */
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+.filter-- .filter-img p{ /* paragraphe icône */
+    margin: auto;
+}
+.filter-img .fas{ /* icône */
+    color: #0065FC;
+    line-height: 50px;
+}
+.filter-- p{ /* paragraphe icône et texte */
+    font-size: 1.125em;
+    margin: auto 1.25em auto 0.725em;
+}
+
+.i{ /* icône info */
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #DEDEDE;
+    color: #0065FC;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 3px;
+
+}
+
+/* -----------------------------------------résultat de la recherche----------------------------------------------------------------- */
+
+ .location{ /* Contener contenant lodging et popular */
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+/* -----------------------------------------hébergement à marseille----------------------------------------------------------------- */
+
+.lodging h2{ /* Gros titre lodging */
+    font-size: 1.375em;
+}
+.lodging h3{ /* Titre lodging */
+    font-size: 1.125em;
+}
+.lodging, .popular{ /* contener lodging + popular */
+    background-color: #F2F2F2;
+    border-radius: 1.25em;
+}
+.lodging--{ /* sous-contener lodging contenant tous les logements */
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.lodging-- a{ /* lien entourant les lodging figure */
+    display: inline-block;
+    width: 28%;
+}
+.lodging-- a:hover{ /* agrandi le bloc au survol */
+    transform: scale(1.05);
+}
+.lodging-figure{ /* bloc unitaire contenant image + texte de chaque logement */
+    background-color: #fff;
+    width: 100%;
+    height: 12.5em;
+    margin: 0 auto 2.5em auto;
+    border-radius: 1.25em;
+    box-shadow: 0px 6px 6px #cbcbcb;
+    overflow: hidden;
+}
+.img-lodging{ /* Bloc contenant l'image du logement */
+    width: 97%;
+    height: 7.188em;
+    overflow: hidden;
+    margin: 0.313em auto 0 auto;
+    border-radius: 1.25em 1.25em 0 0;
+}
+.img-lodging img{ /* Paramètre de l'image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lodging-figure p, .popular-figure p{ /* Paramètre paragraphe lodging et popular */
+    font-size: 0.75em;
+    margin: 0.312em 0;
+}
+.lodging-figure h3, .popular h3{ /* Paramètre titre lodging et popular */
+    font-size: 0.875em;
+    font-weight: bold;
+    margin: 0.312em 0;
+}
+.lodging-figure figcaption{ /* Paramètre texte en dessous des images de logements */
+    width: 92%;
+    height: 5em;
+    margin: auto;
+}
+.fas.fa-star{ /* étoile de notation */
+    color: #0065FC;
+    font-size: 0.75em;
+}
+.fas.fa-star.star-gray{ /* étoile de notation grisé */
+    color: #F2F2F2;
+}
+
+/* -----------------------------------------les plus populaires--------------------------------------------------------------------- */
+
+.popular h2{ /* Paramètre titre popular */
+    font-size: 1.375em;
+}
+.popular-- a{ /* */
+    display: inline-block;
+}
+.more-popular-star{ /* étoile de notation popular */
+    display: inline-block;
+    margin-top: 1.875em;
+}
+.popular a:hover{ /* grossissement au survol */
+    transform: scale(1.05);
+}
+.popular-figure{ /* bloc figure popular */
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto 2.5em auto;
+    border-radius: 1.25em;
+    box-shadow: 0px 6px 6px #cbcbcb;
+    overflow: hidden;
+}
+.img-popular{
+    overflow: hidden;
+}
+.img-popular img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -----------------------------------------les activités-------------------------------------------------------------------------- */
+
+ .activity{ /* Contener activité */
+    width: 95%;
+    margin: auto;
+}
+.activity h2{ /* Titre */
+    font-size: 1.375em;
+    margin: 2.5em 0 1.875em 0;
+}
+.bloc-activity{ /* Bloc réunissant toutes les activités */
+    width: 100%;
+    margin: 0 0 3.75em 0;
+    justify-content: space-between;
+}
+.activity--{ /* Bloc réunissant la colone d'activité */
+    width: 23%;
+}
+.activity-- a, .activity--.small a{ /* Lien */
+    width: 100%;
+}
+.activity a:hover{ /* Action au survol */
+    transform: scale(1.05);
+}
+.large{ /* figure large */
+    width: 100%;
+    margin: 0;
+    border: 0.125em solid #F2F2F2;
+    border-radius: 1.25em;
+    box-shadow: 0px 6px 6px #e5e4e4;
+    overflow: hidden;
+}
+.activity---small{ /* Contener d'activité petit */
+    width: 23%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.img-large{ /* Bloc img large */
+    width: 100%;
+}
+.activity img{ /* toutes les images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.activity figcaption{ /* tous les figcaption */
+    width: 100%;
+    font-size: 0.875em;
+    font-weight: bold;
+    line-height: 3.437em;
+    padding-left: 1.25em;
+}
+.medium{ /* Figure medium */
+    width: 100%;
+    margin: 0;
+    border: 0.125em solid #F2F2F2;
+    border-radius: 1.25em;
+    box-shadow: 0px 6px 6px #e5e4e4;
+    overflow: hidden;
+}
+.img-medium{ /* Bloc img medium */
+    width: 100%;
+}
+.small{ /* Figure small */
+    width: 100%;
+    margin: 0;
+    border: 0.125em solid #F2F2F2;
+    border-radius: 1.25em;
+    box-shadow: 0px 6px 6px #e5e4e4;
+    overflow: hidden;
+}
+.img-small{ /* Bloc img small */
+    width: 100%;
+}
+
+/* -----------------------------------------bas de page------------------------------------------------------------------------------ */
+
+ footer{ /* bas de page */
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 13.75em;
+}
+.footer--{ /* sous contener footer */
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+.footer-- h2{ /* réglage titre footer */
+    margin: 2.8125em auto 1.5625em;
+}
+.footer-- .about ul li{ /* Marge entre les lien */
+    margin-bottom: 0.9375em;
+}
+.about{ 
+    width: 28%;
+}
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------------------------spécificité vue PC----------------------------------------------------------------------- */
+
+@media screen and (min-width: 1280px) {
+    header, nav, nav ul, .search, .filter, .info, .activity---small, .filter--, .location, .lodging--, .popular-figure, .activity--, .bloc-activity, .footer-- { /* Mise en place de flex sur les différents contener */
+        display: flex;
+    }
+    .logo{ /* Spécificité taille logo */
+        width: 67%;
+    }
+    nav ul{ /* Spécificité Menu */
+        width: 22%;
+    }
+    .register{ /* Spécificité taille register */
+        width: 11%;
+    }
+    .search{ /* Spécificité taille recherche */
+        width: 30%;
+    }
+    .map{ /* Spécificité taille map */
+        width: 12%;
+    }
+    form{ /* Spécificité taille formulaire */
+        width: 88%;
+    }
+    .filter-- p{ /* Spécificité paragraphe icône et texte */
+        font-size: 1.125em;
+    }
+    p.info--{ /* Spécificité paragraphe info */
+        margin: 0em 0.313em 2.5em 0;
+    }
+    .lodging{ /* Spécificité du contener lodging */
+        width: 63%;
+        padding: 1.25em 0 1.25em 0;
+    }
+    .lodging h2{ /* Spécificité titre lodging */
+        margin-left: 1.25em;
+    }
+    .lodging h3{ /* Spécificité sous-titre lodging */
+        margin-left: 1.25em;
+    }
+    .lodging-figure h3{ /* Spécificité sous-titre figure */
+        margin-left: 0;
+    }
+    .lodging--{ /* Spécificité sous bloc lodging */
+        margin-top: 2.5em;
+    }
+    .popular{ /* Spécificité taille popular */
+        width: 33%;
+        padding: 1.25em 0 1.25em 0;
+    }
+    .popular h2{ /* Spécificité titre popular */
+        margin-left: 1.25em;
+    }
+    .popular--{ /* Spécificité --popular vue PC */
+        width: 80%;
+        margin: 2.5em auto 0 auto;
+        padding: 0;
+    }
+    .popular-- a{ /* Spécificité taille lien popiular */
+        width: 100%;
+    }
+    .popular-figure{ /* Spécificité popular figure */
+        height: 9.062em;
+    }
+    .img-popular{
+        width: 40%;
+        height: 8.437em;
+        margin: 0.312em 0 0.312em 0.312em;
+        border-radius: 1.25em 0 0 1.25em;
+    }
+    .popular-figure figcaption{
+        width: 60%;
+        margin: 1.25em;
+    }
+    .activity--{ /* Bloc réunissant la colone d'activité */
+        height: 27.813em;
+    }
+    .activity---small{ /* Contener d'activité petit */
+        height: 27.813em;
+    }
+    .img-large{ /* Bloc img large */
+        height: 24.375em;
+    }
+    .activity figcaption{ /* tous les figcaption */
+        height: 3.437em;
+    }
+    .medium{ /* Figure medium */
+        height: 14.687em;
+    }
+    .img-medium{ /* Bloc img medium */
+        height: 11.25em;
+    }
+    .small{ /* Figure small */
+        height: 10.312em;
+    }
+    .img-small{ /* Bloc img small */
+        height: 6.875em;
+    }
+    footer h2{
+        font-size: 1.25em;
+    }
+}
+
+/* -----------------------------------------spécificité vue tablette----------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    header, nav, nav ul, .search, .filter, .filter--, .info, .location, .lodging--, .popular--, .activity--, .activity---small, .bloc-activity, .footer-- { /* Mise en place de flex sur les différents contener */
+        display: flex;
+    } 
+    .logo{
+        width: 55%;
+    }
+    .logo img{
+        width: 13%;
+    }
+    nav ul{ /* Spécificité Menu */
+        width: 30%;
+    }
+    .register{
+        width: 15%;
+    }
+    .search{ /* contener recherche */
+        width: 100%;
+        margin: auto;
+    }
+    .map{ /* contener icône map */
+        width: 10%;
+    }
+    form{ /* définition taille formulaire */
+        width: 90%;
+    }
+    p.info--{ /* paragraphe info */
+        margin: 0em 0.313em 2em 0;
+    }
+    .filter-- p{ /* paragraphe icône et texte */
+        font-size: 1em;
+    }
+    .location{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .lodging{ /* Définition de la largeur du contener lodging */
+        order: 2;
+        width: 100%;
+        padding: 0.9375em 0 0.9375em 0;
+        margin-top: 1.875em;
+    }
+    .lodging h2{
+        margin-left: 1.25em;
+    }
+    .lodging h3{
+        margin-left: 1.25em;
+    }
+    .lodging-figure h3{
+        margin-left: 0;
+    }
+    .lodging--{
+        margin-top: 1.875em;
+    }
+    .more-popular-star{
+        display: inline-block;
+        margin-top: 0;
+    }
+    .popular{
+        order: 1;
+        width: 100%;
+        padding: 1.25em 0 1.25em 0;
+    }
+    .popular h2{
+        margin-left: 1.25em;
+    }
+    .popular--{
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 1.875em;
+    }
+    .popular-- a{
+        width: 28%;
+    }
+    .popular a:hover{
+        transform: scale(1.05);
+    }
+    .popular-figure{
+        height: 12.5em;
+    }
+    .img-popular{
+        width: 97%;
+        height: 7.188em;
+        margin: 0.313em auto 0 auto;
+        border-radius: 1.25em 1.25em 0 0;
+    }
+    .popular-figure figcaption{
+        width: 92%;
+        height: 5em;
+        margin: auto;
+    }
+    .activity--{ /* Bloc réunissant la colone d'activité */
+        height: 20.625em;
+    }
+    .activity---small{ /* Contener d'activité petit */
+        height: 20.625em;
+    }
+    .img-large{ /* Bloc img large */
+        height: 17.8125em;
+    }
+    .activity figcaption{ /* tous les figcaption */
+        height: 2.8125em;
+    }
+    .medium{ /* Figure medium */
+        height: 10.625em;
+    }
+    .img-medium{ /* Bloc img medium */
+        height: 7.8125em;
+    }
+    .small{ /* Figure small */
+        height: 8.125em;
+    }
+    .img-small{ /* Bloc img small */
+        height: 5.3125em;
+    }
+    .footer-- h2{
+        font-size: 1em;
+    }
+    .footer-- .about ul li{
+        font-size: 0.75em;
+    }
+}
+
+/* -----------------------------------------spécificité vue smartphone--------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+    .header, nav, nav ul, form, .info, .location, .popular-figure, .lodging--, .bloc-activity, .search, .filter-- { /* Mise en place de flex sur les différents contener */
+        display: flex;
+    }
+    header{
+        height: 9.375em;
+    }
+    .logo{
+        width: 50%;
+        height: 4.0625em;
+    }
+    .logo img{
+        width: 60%;
+        height: 100%;
+        object-fit: contain;
+        margin: 0;
+    }
+    nav{
+        width: 100%;
+        height: 7.8125em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    nav ul{
+        width: 100%;
+        height: 3.125em;
+        order: 2;
+    }
+    nav ul li{
+        width: 50%;
+        height: 3.125em;
+        margin: auto;
+        border-bottom: 3px solid #e5e4e4;
+    }
+    nav ul li:hover{
+        border: none;
+        border-bottom: 3px solid #0065FC;
+    }
+    a.register{
+        order: 1;
+        margin: auto 1.25em auto 0;
+        color: #0065FC;
+        font-weight: bold;
+        text-align: center;
+    }
+    nav li a{  /* Centrer verticalement les liens du menu */
+        display: inline-block;
+        width: 100%;
+        height: 3.125em;
+        margin: auto;
+        line-height: 3.125em;
+    }
+    .search-filter{
+        width: 90%;
+        margin: auto;
+    }
+    .filter--{
+        margin: 0.625em 0.625em 0 0;
+    }
+    .filter-- p{ /* paragraphe icône et texte */
+        font-size: 1em;
+        margin: auto 0.9375em auto 0.625em;
+    }
+    .location{
+        width: 100%;
+        flex-direction: column;
+    }
+    .popular h2{
+        margin-left: 0.9375em;
+    }
+    .popular{
+        width: 100%;
+        order: 1;
+        padding: 1.25em 0 1.25em 0;
+        border-radius: inherit;
+    }
+    .popular--{ 
+        width: 90%;
+        margin: auto auto 0 auto;
+        padding: 0;
+        margin-top: 1.875em;
+    }
+    .popular-- a{ /* Définition taille lien popiular */
+        width: 100%;
+    }
+    .popular-figure{
+        height: 9.062em;
+        margin: 0 auto 0.90em auto;
+    }
+    .img-popular{
+        width: 40%;
+        height: 8.437em;
+        margin: 0.312em 0 0.312em 0.312em;
+        border-radius: 1.25em 0 0 1.25em;
+    }
+    .popular-figure figcaption{
+        width: 60%;
+        margin: 1.25em;
+    }
+    .lodging{
+        width: 95%;
+        margin: auto auto 1.25em auto;
+        order: 2;
+        background-color: inherit;
+        padding: 0.9375em 0 0.9375em 0;
+        
+    }
+    .lodging h2{
+        margin-left: 0.625em;
+    }
+    .lodging--{
+        flex-direction: column;
+        flex-wrap: inherit;
+        padding-bottom: 1.25em;
+        align-items: center;
+    }
+    .lodging-- a{
+        width: 95%;
+        margin: auto;
+    }
+    .lodging-figure{
+        width: 100%;
+        margin: 0 auto 0.90em auto;
+    }
+    .lodging h3{
+        margin-left: 0.625em;
+    }
+    .lodging-figure h3{
+        margin-left: 0;
+    }
+    .lodging--{
+        margin-top: 1.25em;
+    }
+    .map{
+        width: 15%;
+    }
+    form{
+        width: 85%;
+    }
+    .search--{
+        width: 82%;
+        line-height: 3.125em;
+    }
+    .span-button-search{
+        display: none;
+    }
+    .button-search{
+        background-color: #0065FC;
+        width: 18%;
+        height: 3.125em;
+        margin: 0;
+        padding: 0;
+        border-radius: 17px 17px 17px 17px; 
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1em;
+    }
+    .fas.fa-search{
+        display: initial;
+        
+    }
+    p.info--{ /* paragraphe info */
+        margin: 0 0.313em 1.2em 0;
+    }
+    .bloc-activity{
+        margin-top: 1.25em;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.1875em;
+    }
+    .activity--, .activity---small{
+        width: 95%;
+    }
+    .large, .medium, .small{
+        height: 12.5em;
+        margin: 0 auto 1.4em auto;
+    }
+    .img-large, .img-medium, .img-small{
+        height: 9.5em;
+    }
+    .activity h2{
+        margin:inherit;
+        margin-left: 0.625em;
+    }
+    footer{
+        width: 100%;
+        height: auto;
+        padding: 1.25em 0 1.25em 0;
+    }
+    .footer--{
+        width: 90%;
+        margin: auto;
+    }
+    .footer-- h2{
+        font-size: 1.125em;
+        margin: 1.5625em auto 1.25em;
+    }
+    .footer-- ul li a{
+        font-size: 0.9375em;
+    }
+    .about{
+        width: 100%;
+        margin-bottom: 0.625em;
+    }
+    .about ul li{
+        margin-bottom: 0.4375em;
+    }
+}
